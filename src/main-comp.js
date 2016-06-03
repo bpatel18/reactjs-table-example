@@ -1,26 +1,26 @@
 import React from 'react';
 
 import InputComp from './input-comp';
-import List from './list';
+import Table from './table';
 
 class MainComp extends React.Component {
 
   constructor() {
     super();
     this.buttonClick = this.buttonClick.bind(this);
-    this.addToList = this.addToList.bind(this);
+    this.addToTable = this.addToTable.bind(this);
   }
 
   render() {
-    return (<div><InputComp buttonClick={this.buttonClick}/><List ref="todos"/></div>);
+    return (<div><InputComp buttonClick={this.buttonClick}/><Table ref="datatable"/></div>);
   }
 
   buttonClick(value) {
-    this.addToList(value);
+    this.addToTable(value);
   }
 
-  addToList(value) {
-    this.refs.todos.addToList(value);
+  addToTable(value) {
+    this.refs.datatable.addToTable(value);
   }
 
 }
