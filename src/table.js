@@ -10,9 +10,12 @@ class Table extends React.Component {
   }
 
   render() {
-    let tableItems = this.data.map((val, index) => {
+    let tableItems = this.data.map((val, index) => {//5864.32
+      let sal = '$' + val.salary.replace(/./g, function(c, i, a) {
+        return i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
+      });
       return (<tr className={Style.tr} key={index}><td className={Style.td}>{val.fname}</td><td className={Style.td}>{val.lname}</td>
-        <td className={Style.td}>{val.email}</td><td className={Style.td}>{val.salary}</td></tr>);
+        <td className={Style.td}>{val.email}</td><td className={Style.td_right}>{sal}</td></tr>);
     });
     return (
       <table className={Style.table}>
