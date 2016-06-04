@@ -10,7 +10,7 @@ class Table extends React.Component {
   }
 
   render() {
-    let tableItems = this.data.map((val, index) => {//5864.32
+    let tableItems = this.data.map((val, index) => {
       let sal = '$' + val.salary.replace(/./g, function(c, i, a) {
         return i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
       });

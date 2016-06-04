@@ -7,7 +7,7 @@ export default (refs) => {
   let valName = /^[A-Za-z]+$/;
   let valEmail = /^[A-Za-z0-9._]+\@[A-Za-z]+\.[A-Za-z]{2,3}$/;
   //let valNum = /^\d{1,3}(?:,?\d{3})?(?:.?\d{1,2})?$/;
-  let valNum = /^\d+(?:.?\d{1,2})?$/;
+  let valNum = /^\d+(?:.?\d{2})?$/;
   let success = true;
   if(txtFname == ""){
     refs.spnFname.innerHTML="*".fontcolor("red");
