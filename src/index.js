@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import MainComp from './main-comp';
+import { Provider } from 'react-redux';
+import store from './store';
+import TestComp from './test-comp';
 
 ReactDOM.render(
-  <div>
-    <MainComp/>
-  </div>,
+  <Provider store={store}>
+    <TestComp/>
+  </Provider>,
   document.getElementById('app'));
