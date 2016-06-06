@@ -6,6 +6,7 @@ class InputComp extends React.Component {
   constructor() {
     super();
     this.buttonClick = this.buttonClick.bind(this);
+    //this.state = {fname:'',lname:'',email:'',salary:''};
   }
 
   render() {
@@ -25,7 +26,7 @@ class InputComp extends React.Component {
   }
 
   buttonClick() {
-    console.log(isValid);
+    //console.log(isValid);
     let isVal = isValid(this.refs);
     if(!isVal){
       return;

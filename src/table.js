@@ -3,14 +3,16 @@ import Style from './style/table.css';
 
 class Table extends React.Component {
 
-  constructor() {
-    super();
-    this.data = [];
-    this.addToTable = this.addToTable.bind(this);
+  constructor(props) {
+    super(props);
+    //this.state={selected:{idx:0,rowIdx:0}};
+
+    //this.addToTable = this.addToTable.bind(this);
   }
 
   render() {
-    let tableItems = this.data.map((val, index) => {
+    const  {data=[]}= this.props;
+    let tableItems = data.map((val, index) => {
       let sal = '$' + val.salary.replace(/./g, function(c, i, a) {
         return i && c !== "." && ((a.length - i) % 3 === 0) ? ',' + c : c;
       });
@@ -34,10 +36,10 @@ class Table extends React.Component {
     );
   }
 
-  addToTable(value) {
-    this.data.push(value);
-    this.setState(this.data);
-  }
+  // addToTable(value) {
+  //   this.data.push(value);
+  //   this.setState(this.data);
+  // }
 
 }
 
