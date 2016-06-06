@@ -1,8 +1,7 @@
 import { createStore } from 'redux';
 import { combineReducers } from 'redux';
 
-import sayHi from './say-hi';
-import sayHello from './say-hello';
+import Todos from './reducers/todos';
 
-const finalReducer = combineReducers({sayHi, sayHello});
+const finalReducer = combineReducers({Todos});
 export default createStore(finalReducer);
